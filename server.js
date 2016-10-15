@@ -39,6 +39,15 @@ app.post('/itemAdd', function(req, res) {
 });
 // end create item
 
+// Creates User
+app.post('/userAdd', function(req, res) {
+	console.log(req.body);
+    User.create(req.body, function(err, data) {
+    	console.log(data);
+        res.redirect("/")
+    })
+});
+// end create item
 
 // Indicated mongod is open
 mongoose.connection.once('open', function() {
