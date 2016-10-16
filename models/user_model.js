@@ -4,8 +4,7 @@ var Schema = mongoose.Schema;
 
 var userSchema = new Schema({
     'username': String,
-    'previouspos' : String,
-    'newpos' : String
+    'newpos' : []
 });
 
 

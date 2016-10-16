@@ -1,30 +1,39 @@
-var app = angular.module('MoveOutfits', ['ngRoute']);
+var app = angular.module('MoveOutfits', ['ngRoute', angularDragula(angular)])
 
 
-app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-
-    $locationProvider.html5Mode({
-        enabled: true,
-        requireBase: false
-    });
-
-}])
-
-
-
-app.controller('MainController', ['$http', '$scope', '$routeParams', '$route', function($http, $scope, $routeParams, $route) {
+app.controller('MainController', ['$http', '$scope', '$routeParams', '$route', 'dragulaService', function($http, $scope, $routeParams, $route, dragulaService) {
 
     var self = this;
-    $scope.dataLoaded = true;
 
-    //GET ALL CLOTHING VALUES IN DB
+    //Get all the items in DB
     $http({
         url: '/items',
         method: 'GET',
     }).then(function(itemData) {
-        console.log(itemData);
-        self.itemData = itemData.data;
+        // console.log(itemData);
+        $scope.itemData = itemData.data;
     });
 
+    // Gets the updated order of items via Classname ".itemName"
+    this.reorderItem = function() {
+        var newOrder = []
+    
+        $('.itemName').each(function(index) {
+            newOrder.push(this.id);
+        });
+
+        this.sendNewOrder(newOrder);
+    };
+
+    // Sends the updated order to database
+    this.sendNewOrder = function(newOrder) {
+        $http({
+            method: 'PUT',
+            url: '/saveNewOrder',
+            data: newOrder
+        }).then(function(result) {
+            console.log(result);
+        });
+    };
 }]);
 // end MainController

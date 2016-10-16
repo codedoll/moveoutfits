@@ -1,4 +1,4 @@
-var express  = require('express');
+var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var app = express();
@@ -21,19 +21,22 @@ app.use(express.static('public'));
 app.use(bodyParser.json());
 
 
+
+// ===== FUNCTIONS ===== //
+
 // Sends the list of items in the database
 app.get('/items', function(req, res) {
-    Item.find(function(err, data) {
-        res.send(data)
+    Item.find({}).sort('order').exec(function(err, docs) {
+        res.send(docs)
     });
-})
+});
 //
 
 // Creates Item
 app.post('/itemAdd', function(req, res) {
-	console.log(req.body);
+    console.log(req.body);
     Item.create(req.body, function(err, data) {
-    	console.log(data);
+        console.log(data);
         res.redirect("/")
     })
 });
@@ -41,13 +44,32 @@ app.post('/itemAdd', function(req, res) {
 
 // Creates User
 app.post('/userAdd', function(req, res) {
-	console.log(req.body);
+    console.log(req.body);
     User.create(req.body, function(err, data) {
-    	console.log(data);
+        console.log(data);
         res.redirect("/")
     })
 });
 // end create item
+
+
+// Saves the new order
+// Modifies the index of the item through loop
+app.put('/saveNewOrder', function(req, res) {
+    var itemIDs = req.body;
+
+    for (var i = 0; i < itemIDs.length; i++) {
+
+        var currentID = itemIDs[i]
+        console.log(currentID);
+        var currentindex = i;
+
+        Item.findOneAndUpdate({ _id: currentID }, { $set: { order: currentindex } }, { new: true }, function(err, doc) {
+            console.log(doc);
+        });
+    }
+});
+
 
 // Indicated mongod is open
 mongoose.connection.once('open', function() {

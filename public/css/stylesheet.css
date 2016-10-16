@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css?family=Ek+Mukta');
+
+
+body {
+	font-family: 'Ek Mukta', sans-serif;
+	font-size: 2em;
+	color: white;
+    background-color: #f2f2f2;
+    text-shadow: 0 0 4px #333;
+}
+
+.ItemHolder {
+    margin: .5em;
+    display: inline-block;
+}
+
+.itemName {
+
+}
+
+#orderButton {
+	background-color: #ffffff;
+	border: 2px #ccc solid !important;
+	color: #ccc;
+}
+
+.headDiv {
+	width: 100%;
+	background-color: #38c29e;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    max-width: 200px;
+    max-width: 300px;
+    border: 10px solid rgba(128, 121, 121, 0.20);
+    border-radius: 50px;
+}
+
+
+/*DRAGULA EFFECTS*/
+/*https://github.com/bevacqua/dragula*/
+
+.gu-mirror {
+	transition: all 0.5s ease-in-out;
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    opacity: 0.8;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    filter: alpha(opacity=80);
+}
+
+.gu-hide {
+    display: none !important;
+}
+
+.gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+}
+
+.gu-transit {
+    opacity: 0.2;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+    filter: alpha(opacity=20);
+}
