@@ -2,21 +2,25 @@ MoveOutfits
 ===================
 
 Github: https://github.com/codedoll/moveoutfits/
+Live Demo: https://moveoutfits.herokuapp.com/
 
 This project uses the following:
  
  -**Language**: HTML, Javascript
 
  -**Database** : MongoDB
+
+ -**Server-side** : Nodejs
  
  -**Framework** : AngularJS
  
  -**Library**: jQuery, Dragula
 
 
+
 ----------
 
-Time spent coding: 6 hours
+Time spent building: 6 hours
 
 ----------
 
