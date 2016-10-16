@@ -5,6 +5,8 @@ MoveOutfits
 
 ***Live Demo:*** https://moveoutfits.herokuapp.com/
 
+----------
+
 This project uses the following:
  
  -**Language**: HTML, Javascript
