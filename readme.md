@@ -14,7 +14,7 @@ This project uses the following:
  
  -**Framework** : AngularJS
  
- -**Library**: jQuery, Dragula
+ -**Library**: jQuery, Dragula, express, 
 
 
 
@@ -32,6 +32,7 @@ Time spent building: 6 hours
  - Logic behind database query sort
  - Finding a good library for drag and drop functionality
  - The library I used was either not agreeing with my CSS styling or needs better DOM control on horizontal ordering
- - Deciding if the items should be auto-save. I decided not to auto save the items due to the possibility of clients making a mistake while dragging and dropping, and making the website much more slower due to the additional digest-loops involved.
+ - Deciding if the items should be auto-save. I decided not to auto save the items due to the possibility of clients making a mistake while dragging and dropping, and making the website much more slower due to the additional digest-loops involved
+ - Publishing the live demo took 2 hours due to buildpack complications
 
  **Made with <3 by Lyn**
