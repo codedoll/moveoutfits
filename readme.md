@@ -6,8 +6,11 @@ Github: https://github.com/codedoll/moveoutfits/
 This project uses the following:
  
  -**Language**: HTML, Javascript
+
  -**Database** : MongoDB
+ 
  -**Framework** : AngularJS
+ 
  -**Library**: jQuery, Dragula
 
 
