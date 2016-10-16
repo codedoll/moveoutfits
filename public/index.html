@@ -14,19 +14,20 @@
     <div class="headDiv">
         <h1>Items</h1>
     </div>
-        <form action="/itemAdd" method="POST">
+    <!--         
+    <form action="/itemAdd" method="POST">
         <input type="text" name="name" placeholder="item name" />
         <br>
         <input type="text" name="imgurl" placeholder="img url" />
         <br>
         <input type="submit" value="submit" />
-    </form>
+    </form> -->
     <button id="orderButton" class="btn btn-primary btn-lg center-block" " ng-click="mctrl.reorderItem() ">Save</button>
-        <h1> User </h1>
+<!--         <h1> User </h1>
     <form action="/userAdd " method="POST ">
         <input type="text " name="username " placeholder="username " />
         <input type="submit " value="submit " />
-    </form>
+    </form> -->
     <div class="mainItemContainer ">
         <div class='container' dragula='"bag-one "' dragula-scope="$parent ">
             <div class="ItemHolder " ng-repeat="item in itemData " dragula-model="itemData ">
