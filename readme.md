@@ -1,8 +1,9 @@
 MoveOutfits
 ===================
 
-Github: https://github.com/codedoll/moveoutfits/
-Live Demo: https://moveoutfits.herokuapp.com/
+***Github:*** https://github.com/codedoll/moveoutfits/
+
+***Live Demo:*** https://moveoutfits.herokuapp.com/
 
 This project uses the following:
  
