@@ -1,0 +1,30 @@
+{
+  "name": "moveoutfits",
+  "version": "1.0.0",
+  "description": "MoveOutfits ===================",
+  "main": "server.js",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-dragula": "^1.2.8",
+    "body-parser": "^1.15.2",
+    "dragula": "^3.7.2",
+    "express": "^4.14.0",
+    "nodemon": "^1.11.0",
+    "mongoose": "^4.6.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codedoll/moveoutfits.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codedoll/moveoutfits/issues"
+  },
+  "homepage": "https://github.com/codedoll/moveoutfits#readme"
+}

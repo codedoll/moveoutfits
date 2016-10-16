@@ -5,7 +5,7 @@ var app = express();
 
 // PORT & MONGODB
 var port = process.env.PORT || 3000
-var MONGODBURI = process.env.MONGODB_URI || 'mongodb://localhost:27017/moveoutfits'
+var MONGODBURI = process.env.MONGODB_URI
 
 // CONTROLLERS
 var Item = require('./models/item_model.js');
