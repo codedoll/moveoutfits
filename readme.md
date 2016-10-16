@@ -27,6 +27,7 @@ Time spent building: 6 hours
 **How to use**
  - Drag and drop items to desired location
  - Hit the "**save**" button. Important!!! Otherwise, the new order will **not** be saved.
+ Note: The image "Mandarin Sakura Print" was mis-sized on purpose so that it can be a clear indication of reordering, for reference.
 
 **Struggles**
  - Logic behind database query sort
